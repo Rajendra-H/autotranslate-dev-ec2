@@ -2,11 +2,8 @@
 require '/var/www/html//autoload.php';
 use Aws\S3\S3Client;
 
-// $input_names = array('AutoTranslate-NF1','AutoTranslate-NF2');
-// $keys = array('606554322e561d067b9009f4','6065547e85a2a4017b61c728');
-
-$input_names = array('nnpl','industry','Disease_Biopharma','competitors','Disease_Diabetes_Obesity');
-$keys = array('5c0f6d3422665b04b2515f63','6049a9b5c5553532b3d5d743','5c4e4dd37a9edffd51366110','5c0f6d9e22665b04b2515f64','5c0f6e2b3bca967978986832');
+$input_names = array('CNAEU','CMECA','CJapan','CCSA','SNAEU','SMECA','SJapan','SCSA','CAO','SAO');
+$keys = array('5a43305f3d0ec3ab9b0a3a58','5a4330eb3f4d697b87399afc','5a432fc0f50f048d87bb7d63','5a43308f724bd3ae9b23dec9','5a28e16d5c4970215b0ad1a7','5a28e18f3559af02bead7c14','5a28e1d43ef450185bdea3e0','5a28e1a85c4970215b0ad1a9','5a43313f60d62841fb00563f','5a28ed875c4970215b0ad1ad');
 
 
 for ($num=0; $num<count($keys); $num++){
@@ -15,7 +12,7 @@ for ($num=0; $num<count($keys); $num++){
     $filename="translate-$input_names[$num].xml";
 
 
-    $file=file_get_contents("https://app.meltwater.com/gyda/outputs/$keys[$num]/rendering?apiKey=570b21ad1f090138bfdb1f49&type=html");
+    $file=file_get_contents("https://app.meltwater.com/gyda/outputs/$keys[$num]/rendering?apiKey=594220e9b16d95a9b1e4f659&type=html");
 
 
     $arr=explode("</channel>",$file);

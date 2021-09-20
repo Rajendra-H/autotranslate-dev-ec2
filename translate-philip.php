@@ -1,5 +1,5 @@
 <?php
-require './autoload.php';
+require '/var/www/html//autoload.php';
 use Aws\S3\S3Client;
 
 
